@@ -1,112 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Beuxj | Environment Designer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beuxj | Environment Designer</title>
 
-    <!-- Poppins Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <!-- NAVBAR -->
-<nav>
-    <div class="logo-container">
-        <img src="assets\logo\BEUXJ.png" alt="beuxj logo">
-        <span class="brand-name">beuxj</span>
-    </div>
+<nav class="navbar">
+    <div class="container nav-container">
 
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#socials">Socials</a></li>
-    </ul>
+        <div class="logo-container">
+            <img src="assets\logo\BEUXJ.png" alt="logo">
+            <span class="brand-name">beuxj</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#what">Work</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#socials">Socials</a></li>
+        </ul>
+
+    </div>
 </nav>
 
 <!-- HERO -->
 <section id="home" class="hero">
-    <h2>Environment Designer & Game Developer</h2>
-    <p>I build atmospheric worlds, cinematic spaces, and immersive game environments.</p>
-    <button onclick="scrollToSection('projects')">View My Work</button>
+    <div class="container">
+        <h2>Environment Designer & Game Developer</h2>
+        <p>
+            I build atmospheric worlds, cinematic spaces, and immersive environments
+            focused on mood, lighting, and storytelling.
+        </p>
+        <button onclick="scrollToSection('projects')">View My Work</button>
+    </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="projects">
-    <h3>Current & Featured Projects</h3>
+<section id="projects" class="reveal">
+    <div class="container">
+        <h3>Projects</h3>
 
-    <div class="project-grid">
-        <div class="project-card">
-            <h4>Haunted House Game</h4>
-            <p>
-                First-person atmospheric horror where rooms subtly change on re-entry,
-                creating psychological tension through environment shifts.
-            </p>
+        <div class="project-grid">
+            <div class="project-card">
+                <h4>Haunted House Game</h4>
+                <p>Rooms subtly change on re-entry creating tension.</p>
+            </div>
+
+            <div class="project-card">
+                <h4>Cave Exploration Game</h4>
+                <p>Claustrophobic exploration focused on immersion.</p>
+            </div>
+
+            <div class="project-card">
+                <h4>Environment Studies</h4>
+                <p>Lighting and composition experiments in UE5.</p>
+            </div>
         </div>
+    </div>
+</section>
 
-        <div class="project-card">
-            <h4>Cave Exploration Game</h4>
-            <p>
-                Claustrophobic cave survival focused on darkness, puzzles,
-                and immersive atmosphere without combat.
-            </p>
-        </div>
+<!-- WHAT I BUILD -->
+<section id="what" class="reveal">
+    <div class="container">
+        <h3>What I Build</h3>
 
-        <div class="project-card">
-            <h4>Environment Studies</h4>
-            <p>
-                Blender & UE5 lighting studies exploring realism,
-                mood, and cinematic composition.
-            </p>
+        <div class="what-grid">
+            <div class="what-card"><h4>Atmospheric Environments</h4></div>
+            <div class="what-card"><h4>Cinematic Lighting</h4></div>
+            <div class="what-card"><h4>Environment Assets</h4></div>
+            <div class="what-card"><h4>Immersive Spaces</h4></div>
         </div>
     </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="skills">
-    <h3>Skill Sets</h3>
+<section id="skills" class="reveal">
+    <div class="container">
+        <h3>Technical Skill Level</h3>
 
-    <div class="skill-grid">
-        <div class="skill-card">
-            <h4>Blender</h4>
-            <p>Game-ready assets, realistic materials, lighting.</p>
-        </div>
+        <div class="skill-bars">
 
-        <div class="skill-card">
-            <h4>Unreal Engine 5</h4>
-            <p>Atmospheric level design and cinematic lighting.</p>
-        </div>
+            <div class="skill">
+                <div class="skill-header">
+                    <span>Blender</span>
+                    <span>30%</span>
+                </div>
+                <div class="bar">
+                    <div class="progress" data-width="30%"></div>
+                </div>
+            </div>
 
-        <div class="skill-card">
-            <h4>Godot</h4>
-            <p>Gameplay prototyping and systems design.</p>
-        </div>
+            <div class="skill">
+                <div class="skill-header">
+                    <span>Unreal Engine</span>
+                    <span>25%</span>
+                </div>
+                <div class="bar">
+                    <div class="progress" data-width="25%"></div>
+                </div>
+            </div>
 
-        <div class="skill-card">
-            <h4>Game Design</h4>
-            <p>Environmental horror & immersive spaces.</p>
+            <div class="skill">
+                <div class="skill-header">
+                    <span>Lighting & Composition</span>
+                    <span>15%</span>
+                </div>
+                <div class="bar">
+                    <div class="progress" data-width="15%"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <div class="skill-header">
+                    <span>Godot</span>
+                    <span>60%</span>
+                </div>
+                <div class="bar">
+                    <div class="progress" data-width="60%"></div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
 
 <!-- SOCIALS -->
-<section id="socials" class="social-links">
-    <h3>Connect With Me</h3>
+<section id="socials" class="reveal">
+    <div class="container">
+        <h3>Connect</h3>
 
-    <div class="socials">
+        <div class="socials">
         <a href="https://github.com/Beuxj" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/ritvik-paul-022bb6386/" target="_blank">LinkedIn</a>
         <a href="https://www.instagram.com/beuxj.dev" target="_blank">Instagram</a>
         <a href="https://www.youtube.com/@Beuxjcreates" target="_blank">YouTube</a>
         <a href="https://beuxj.itch.io/" target="_blank">Itch.io</a>
+
+        </div>
     </div>
 </section>
 
 <footer>
-    © 2026 beuxj | Environment Designer Portfolio
+    © 2026 beuxj
 </footer>
 
 <script src="script.js"></script>
