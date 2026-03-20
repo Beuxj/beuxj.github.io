@@ -19,8 +19,8 @@
 <nav class="navbar">
     <div class="container nav-container">
 
-        <!-- Logo + Brand -->
-        <div class="logo-container">
+        <!-- Logo + Brand (Click this for Easter Egg) -->
+        <div class="logo-container" id="logo">
             <img src="assets/logo/BEUXJ.png" alt="logo">
             <span class="brand-name">beuxj</span>
         </div>
@@ -35,39 +35,33 @@
     </div>
 </nav>
 
+<!-- Bio popup (hidden by default) -->
+<div id="bio-popup">
+  <span id="close-popup">&times;</span>
+  <p id="bio-text"></p>
+</div>
+
 <!-- ================= HERO SECTION ================= -->
 <section id="home" class="hero">
-
-    <!-- Overlay (for centering content) -->
     <div class="hero-overlay">
-
-        <!-- Glass Content Box -->
         <div class="hero-box">
             <h1>Environment Designer & Game Developer</h1>
             <p>
                 I create atmospheric worlds, cinematic lighting,
                 and immersive environments focused on mood and storytelling.
             </p>
-
             <button onclick="scrollToSection('skills')">
                 View Arsenal
             </button>
         </div>
-
     </div>
-
 </section>
 
 <!-- ================= PROJECTS ================= -->
-
 <section id="projects" class="reveal divider">
     <div class="container">
-
         <h3>Projects</h3>
-
         <div class="projects-grid">
-
-            <!-- ================= CAVE GAME ================= -->
             <div class="project-card cave">
                 <div class="project-overlay">
                     <h4>Cave Exploration</h4>
@@ -78,8 +72,6 @@
                     <button>View Project</button>
                 </div>
             </div>
-
-            <!-- ================= HAUNTED HOUSE ================= -->
             <div class="project-card haunted">
                 <div class="project-overlay">
                     <h4>Haunted House: Skinwalker</h4>
@@ -90,8 +82,6 @@
                     <button>View Project</button>
                 </div>
             </div>
-
-            <!-- ================= GODOT DEMOS ================= -->
             <div class="project-card godot-demo">
                 <div class="project-overlay">
                     <h4>Godot Demos</h4>
@@ -102,7 +92,6 @@
                     <button>View Work</button>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
@@ -110,24 +99,15 @@
 <!-- ================= SKILL CARDS ================= -->
 <section id="skills" class="reveal divider">
     <div class="container">
-
         <h3>Technical Arsenal</h3>
-
         <div class="skills-grid">
-
-            <!-- CARD 1 -->
             <div class="skill-card">
-
                 <div class="card-header">
                     <span>SKILL CARD / TYPE 01</span>
                     <div class="level">5</div>
                 </div>
-
                 <h4>UNREAL ENGINE 5</h4>
-
-                <!-- IMAGE -->
                 <div class="card-image ue5"></div>
-
                 <div class="card-desc">
                     <span class="tag">PRIMARY SYSTEM</span>
                     <p>
@@ -135,21 +115,14 @@
                         Nanite, and cinematic lighting workflows.
                     </p>
                 </div>
-
             </div>
-
-            <!-- CARD 2 -->
             <div class="skill-card">
-
                 <div class="card-header">
                     <span>SKILL CARD / TYPE 02</span>
                     <div class="level">4</div>
                 </div>
-
                 <h4>BLENDER</h4>
-
                 <div class="card-image blender"></div>
-
                 <div class="card-desc">
                     <span class="tag">ASSET CREATION</span>
                     <p>
@@ -157,21 +130,14 @@
                         and environment-ready modeling workflows.
                     </p>
                 </div>
-
             </div>
-
-            <!-- CARD 3 -->
             <div class="skill-card">
-
                 <div class="card-header">
                     <span>SKILL CARD / TYPE 03</span>
                     <div class="level">6</div>
                 </div>
-
                 <h4>GODOT</h4>
-
                 <div class="card-image godot"></div>
-
                 <div class="card-desc">
                     <span class="tag">GAME SYSTEMS</span>
                     <p>
@@ -179,9 +145,7 @@
                         gameplay mechanics with a focus on atmosphere.
                     </p>
                 </div>
-
             </div>
-
         </div>
     </div>
 </section>
@@ -189,31 +153,19 @@
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="reveal">
     <div class="container">
-
         <h3>Contact</h3>
-
-        <!-- MAIN CONTACT BOX -->
         <div class="contact-wrapper">
-
-            <!-- ================= EMAIL BOX (PRIMARY) ================= -->
             <div class="contact-box primary">
-
                 <p>
                     Have a project in mind or want to collaborate?
                     Let’s build something atmospheric.
                 </p>
-
                 <a href="mailto:buexj.dev@gmail.com" class="email-btn">
                     buexj.dev@gmail.com
                 </a>
-
             </div>
-
-            <!-- ================= SOCIALS BOX (SECONDARY) ================= -->
             <div class="contact-box secondary">
-
                 <p class="social-title">Elsewhere</p>
-
                 <div class="social-links">
                    <a href="https://github.com/Beuxj" target="_blank">GitHub</a>
                    <a href="https://www.linkedin.com/in/ritvik-paul-022bb6386/" target="_blank">LinkedIn</a>
@@ -221,11 +173,8 @@
                    <a href="https://www.youtube.com/@Beuxjcreates" target="_blank">YouTube</a>
                    <a href="https://beuxj.itch.io/" target="_blank">Itch.io</a>
                 </div>
-
             </div>
-
         </div>
-
     </div>
 </section>
 

@@ -43,10 +43,8 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-
     background: rgba(15,17,23,0.7);
     backdrop-filter: blur(12px);
-
     border-bottom: 1px solid var(--border);
     z-index: 1000;
 }
@@ -63,6 +61,8 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* click animation */
 }
 
 .logo-container img {
@@ -75,6 +75,11 @@ body {
 .brand-name {
     color: var(--accent);
     font-weight: 500;
+}
+
+/* Logo click scale effect */
+.logo-container:active {
+    transform: scale(1.1);
 }
 
 /* Nav links */
@@ -95,6 +100,59 @@ body {
     color: var(--accent);
 }
 
+/* ================= EASTER EGG ================= */
+/* Bio Popup Glassmorphic + Typing Animation */
+#bio-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(28, 31, 42, 0.85); /* matches hero box */
+  backdrop-filter: blur(18px);
+  color: var(--accent);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+  text-align: left;
+  display: none;
+  z-index: 1000;
+  max-width: 400px;
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  border: 1px solid rgba(139,213,163,0.2);
+}
+
+#bio-popup.show {
+    display: block;
+    animation: popupFade 0.3s ease forwards;
+}
+
+@keyframes popupFade {
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+    100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+#close-popup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+#bio-text::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
 /* ================= HERO ================= */
 .hero {
     height: 100vh;
@@ -106,11 +164,9 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     background: rgba(0,0,0,0.35);
 }
 
@@ -119,13 +175,10 @@ body {
     max-width: 650px;
     padding: 45px;
     text-align: center;
-
     background: rgba(28,31,42,0.35);
     backdrop-filter: blur(18px);
-
     border-radius: 20px;
     border: 1px solid rgba(139,213,163,0.1);
-
     box-shadow: 0 10px 40px rgba(0,0,0,0.6);
 }
 
@@ -143,13 +196,10 @@ body {
 .hero-box button {
     padding: 12px 28px;
     border-radius: 30px;
-
     background: rgba(139,213,163,0.15);
     border: 1px solid rgba(139,213,163,0.4);
-
     color: var(--accent);
     cursor: pointer;
-
     transition: 0.3s;
 }
 
@@ -166,14 +216,11 @@ h3 {
     text-align: center;
     margin-bottom: 50px;
     text-shadow: 0 0 10px rgba(139,213,163,0.3);
-
     color: var(--accent);
-
     font-size: 22px;
     font-weight: 600;
-
     letter-spacing: 2px;
-    text-transform: uppercase; /* 🔥 THIS IS KEY */
+    text-transform: uppercase;
 }
 
 /* ================= PROJECTS ================= */
@@ -186,13 +233,10 @@ h3 {
 .project-card {
     position: relative;
     height: 280px;
-
     border-radius: 18px;
     overflow: hidden;
-
     background-size: cover;
     background-position: center;
-
     transition: 0.4s;
 }
 
@@ -205,13 +249,11 @@ h3 {
     content: "";
     position: absolute;
     inset: 0;
-
     background: linear-gradient(
         to top,
         rgba(0,0,0,0.85),
         rgba(0,0,0,0.2)
     );
-
     z-index: 1;
 }
 
@@ -219,7 +261,6 @@ h3 {
     position: absolute;
     bottom: 0;
     z-index: 2;
-
     padding: 20px;
 }
 
@@ -237,13 +278,10 @@ h3 {
 .project-overlay button {
     padding: 8px 16px;
     border-radius: 20px;
-
     background: rgba(139,213,163,0.2);
     border: 1px solid rgba(139,213,163,0.4);
-
     color: var(--accent);
     cursor: pointer;
-
     transition: 0.3s;
 }
 
@@ -252,17 +290,9 @@ h3 {
 }
 
 /* Background images */
-.project-card.cave {
-    background-image: url("assets/projects/cave.jpg");
-}
-
-.project-card.haunted {
-    background-image: url("assets/projects/haunted.jpg");
-}
-
-.project-card.godot-demo {
-    background-image: url("assets/projects/godot.jpg");
-}
+.project-card.cave { background-image: url("assets/projects/cave.jpg"); }
+.project-card.haunted { background-image: url("assets/projects/haunted.jpg"); }
+.project-card.godot-demo { background-image: url("assets/projects/godot.jpg"); }
 
 /* ================= SKILL CARDS ================= */
 .skills-grid {
@@ -273,18 +303,14 @@ h3 {
 
 .skill-card {
     position: relative;
-
     background: linear-gradient(
         180deg,
         rgba(28,31,42,0.95),
         rgba(20,22,30,0.95)
     );
-
     border-radius: 16px;
     padding: 20px;
-
     border: 1px solid var(--border);
-
     transition: 0.4s;
 }
 
@@ -304,10 +330,8 @@ h3 {
 .level {
     background: rgba(139,213,163,0.2);
     border: 1px solid rgba(139,213,163,0.4);
-
     padding: 5px 10px;
     border-radius: 6px;
-
     color: var(--accent);
 }
 
@@ -316,7 +340,6 @@ h3 {
     height: 180px;
     border-radius: 10px;
     margin: 15px 0;
-
     background-size: cover;
     background-position: center;
     position: relative;
@@ -329,25 +352,15 @@ h3 {
     background: rgba(0,0,0,0.3);
 }
 
-/* Example images */
-.card-image.ue5 {
-    background-image: url("assets/cards/ue5.jpg");
-}
-
-.card-image.blender {
-    background-image: url("assets/cards/blender.jpg");
-}
-
-.card-image.godot {
-    background-image: url("assets/cards/godot.jpg");
-}
+.card-image.ue5 { background-image: url("assets/cards/ue5.jpg"); }
+.card-image.blender { background-image: url("assets/cards/blender.jpg"); }
+.card-image.godot { background-image: url("assets/cards/godot.jpg"); }
 
 /* Description */
 .card-desc {
     background: rgba(255,255,255,0.03);
     padding: 15px;
     border-radius: 10px;
-
     border-left: 2px solid var(--accent);
 }
 
@@ -361,53 +374,33 @@ h3 {
     display: flex;
     flex-direction: column;
     gap: 25px;
-
     max-width: 700px;
     margin: auto;
 }
 
-/* Glass box */
 .contact-box {
     text-align: center;
-
     background: rgba(28,31,42,0.4);
     backdrop-filter: blur(18px);
-
     border-radius: 18px;
     border: 1px solid rgba(139,213,163,0.12);
-
     box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-
     transition: 0.3s;
 }
 
-.contact-box:hover {
-    transform: translateY(-5px);
-}
+.contact-box:hover { transform: translateY(-5px); }
 
-/* Primary email */
-.contact-box.primary {
-    padding: 45px;
-}
+.contact-box.primary { padding: 45px; }
+.contact-box.secondary { padding: 25px; }
 
-/* Secondary socials */
-.contact-box.secondary {
-    padding: 25px;
-}
-
-/* Email button */
 .email-btn {
     display: inline-block;
-
     padding: 12px 28px;
     border-radius: 30px;
-
     background: rgba(139,213,163,0.1);
     border: 1px solid rgba(139,213,163,0.3);
-
     color: var(--accent);
     text-decoration: none;
-
     transition: 0.3s;
 }
 
@@ -416,7 +409,6 @@ h3 {
     box-shadow: 0 0 20px rgba(139,213,163,0.2);
 }
 
-/* Socials */
 .social-links {
     display: flex;
     justify-content: center;
@@ -427,13 +419,10 @@ h3 {
 .social-links a {
     padding: 10px 18px;
     border-radius: 25px;
-
     background: rgba(255,255,255,0.05);
     border: 1px solid var(--border);
-
     color: var(--accent);
     text-decoration: none;
-
     transition: 0.3s;
 }
 
@@ -441,18 +430,10 @@ h3 {
     background: rgba(139,213,163,0.15);
 }
 
-/* ================= CONTACT TEXT SPACING FIX ================= */
 .contact-box p {
     color: var(--muted);
     line-height: 1.6;
-
-    margin-bottom: 28px; /* 🔥 proper breathing space */
-}
-
-/* Ensure button doesn’t stick to anything */
-.email-btn {
-    display: inline-block;
-    margin-top: 5px; /* subtle separation */
+    margin-bottom: 28px;
 }
 
 /* ================= FOOTER ================= */
@@ -476,75 +457,52 @@ footer {
 
 /* ================= MOBILE ================= */
 @media(max-width:768px){
-    .nav-links {
-        display: none;
-    }
-
-    .hero-box h1 {
-        font-size: 26px;
-    }
+    .nav-links { display: none; }
+    .hero-box h1 { font-size: 26px; }
 }
 
-/* ================= CLEAN GAME DIVIDER (NO DOUBLE) ================= */
-
+/* ================= CLEAN GAME DIVIDER ================= */
 .divider {
-    padding-bottom: 50px; /* space before divider */
+    padding-bottom: 50px;
 }
 
-/* SINGLE DIVIDER LINE */
 .divider::after {
     content: "";
-
     display: block;
     margin: 70px auto 0;
-
     width: 33%;
     max-width: 420px;
     min-width: 180px;
-
     height: 2px;
-
     position: relative;
-
-    /* glow line */
     background: linear-gradient(
         90deg,
         transparent,
         rgba(139,213,163,0.9),
         transparent
     );
-
     border-radius: 10px;
-
     box-shadow:
         0 0 12px rgba(139,213,163,0.5),
         0 0 25px rgba(139,213,163,0.2);
-
     animation: dividerPulse 3s ease-in-out infinite;
 }
 
-/* CENTER ENERGY DOT */
 .divider::after::before {
     content: "";
-
     position: absolute;
-
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-
     width: 8px;
     height: 8px;
-
     background: var(--accent);
     border-radius: 50%;
-
     box-shadow:
         0 0 10px var(--accent),
         0 0 20px rgba(139,213,163,0.6);
 }
 
-/* ANIMATION */
 @keyframes dividerPulse {
     0% { opacity: 0.6; transform: scaleX(0.95); }
     50% { opacity: 1; transform: scaleX(1); }
