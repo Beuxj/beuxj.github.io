@@ -159,7 +159,7 @@ body {
 /* ================= HERO ================= */
 .hero {
     height: 100vh;
-    background: url("assets/logo/bannersketch.png") center/cover no-repeat;
+    background: url("../assets/logo/bannersketch.png") center/cover no-repeat;
     position: relative;
 }
 

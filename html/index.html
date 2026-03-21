@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
 
 <!-- Main CSS -->
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
 
         <!-- Logo + Brand (Click this for Easter Egg) -->
         <div class="logo-container" id="logo">
-            <img src="assets/logo/BEUXJ.png" alt="logo">
+            <img src="../assets/logo/BEUXJ.png" alt="logo">
             <span class="brand-name">beuxj</span>
         </div>
 
@@ -59,39 +59,30 @@
     </div>
 </section>
 
-<!-- ================= PROJECTS ================= -->
+<!-- ================= PROJECT CATEGORIES ================= -->
 <section id="projects" class="reveal divider">
     <div class="container">
         <h3>Projects</h3>
         <div class="projects-grid">
-            <div class="project-card cave">
+            <div class="project-card category blender" onclick="redirectTo('blender.html')">
                 <div class="project-overlay">
-                    <h4>Cave Exploration</h4>
-                    <p>
-                        A claustrophobic first-person experience focused on
-                        atmosphere, darkness, and environmental storytelling.
-                    </p>
-                    <button>View Project</button>
+                    <h4>Blender Renders</h4>
+                    <p>High-quality 3D assets and environment renders created in Blender.</p>
+                    <button>View Renders</button>
                 </div>
             </div>
-            <div class="project-card haunted">
-                <div class="project-overlay">
-                    <h4>Haunted House: Skinwalker</h4>
-                    <p>
-                        A psychological horror where the house reacts to your
-                        presence, with subtle shifts and disturbing anomalies.
-                    </p>
-                    <button>View Project</button>
-                </div>
-            </div>
-            <div class="project-card godot-demo">
+            <div class="project-card category godot" onclick="redirectTo('godot.html')">
                 <div class="project-overlay">
                     <h4>Godot Demos</h4>
-                    <p>
-                        Small gameplay systems, mechanics, and experimental
-                        prototypes built using Godot Engine.
-                    </p>
-                    <button>View Work</button>
+                    <p>Gameplay prototypes, mechanics, and experimental systems built in Godot.</p>
+                    <button>View Demos</button>
+                </div>
+            </div>
+            <div class="project-card category games" onclick="redirectTo('games.html')">
+                <div class="project-overlay">
+                    <h4>Games</h4>
+                    <p>Completed or playable games showcasing immersive environments and gameplay.</p>
+                    <button>View Games</button>
                 </div>
             </div>
         </div>
@@ -186,7 +177,7 @@
 </footer>
 
 <!-- JS -->
-<script src="script.js"></script>
+<script src="../js/script.js"></script>
 
 </body>
 </html>

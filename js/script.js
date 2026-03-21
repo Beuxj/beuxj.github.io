@@ -73,6 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Redirect to a new page
+function redirectTo(url) {
+    window.location.href = url;
+}
+
 // ================= EVENT LISTENERS =================
 window.addEventListener("scroll", animateSkillCards);
 window.addEventListener("load", animateSkillCards);
