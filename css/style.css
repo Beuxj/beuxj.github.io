@@ -1,15 +1,16 @@
 /* ================= ROOT THEME ================= */
 :root {
-    --bg: #12100D;               /* Dark Charcoal Brown - main background */
-    --card: rgba(45,38,30,0.35); /* Deep Moss/Bark - glassy panels/cards */
+    /* ================= BLACK-BROWN-BEIGE PALETTE ================= */
+    --bg: #0D0D0D;                 /* Primary Background - black */
+    --card: rgba(92,70,61,0.35);   /* Secondary Elements / Panels - brown with transparency */
 
-    --accent: #7A4B32;           /* Dark Rust / Earth Brown - main accent */
-    --accent-strong: #A57C5A;    /* Soft Brown Glow - hover/glow accent */
+    --accent: #E5DFC4;             /* Tertiary Highlight / text - beige */
+    --accent-strong: rgba(229,223,196,0.9); /* Stronger beige for hover/glow */
 
-    --text: #D9D5C8;             /* Sandstone - primary text */
-    --muted: #A1866A;            /* Warmer Brown - secondary/muted text */
+    --text: #E5DFC4;               /* Primary text - beige */
+    --muted: rgba(229,223,196,0.7); /* Muted text for secondary info */
 
-    --border: rgba(165,124,90,0.3); /* Soft brown border/glow */
+    --border: rgba(229,223,196,0.3); /* Borders / subtle glow - beige tint */
 }
 
 /* ================= RESET ================= */
