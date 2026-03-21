@@ -1,15 +1,15 @@
 /* ================= ROOT THEME ================= */
 :root {
-    --bg: #0f1117;
-    --card: #1c1f2a;
+    --bg: #12100D;               /* Dark Charcoal Brown - main background */
+    --card: rgba(45,38,30,0.35); /* Deep Moss/Bark - glassy panels/cards */
 
-    --accent: #8bd5a3;
-    --accent-strong: #6ee7a0;
+    --accent: #7A4B32;           /* Dark Rust / Earth Brown - main accent */
+    --accent-strong: #A57C5A;    /* Soft Brown Glow - hover/glow accent */
 
-    --text: #e6e9ef;
-    --muted: #9aa3b2;
+    --text: #D9D5C8;             /* Sandstone - primary text */
+    --muted: #A1866A;            /* Warmer Brown - secondary/muted text */
 
-    --border: rgba(255,255,255,0.06);
+    --border: rgba(165,124,90,0.3); /* Soft brown border/glow */
 }
 
 /* ================= RESET ================= */
@@ -26,9 +26,14 @@ img {
 
 /* ================= BODY ================= */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Code Pro', monospace;
     background: var(--bg);
     color: var(--text);
+}
+
+/* Bio popup font */
+#bio-popup {
+    font-family: 'Source Code Pro', monospace;
 }
 
 /* ================= CONTAINER ================= */
@@ -43,7 +48,7 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(15,17,23,0.7);
+    background: rgba(18,16,13,0.7);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     z-index: 1000;
@@ -62,7 +67,7 @@ body {
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    transition: transform 0.2s ease; /* click animation */
+    transition: transform 0.2s ease;
 }
 
 .logo-container img {
@@ -77,7 +82,6 @@ body {
     font-weight: 500;
 }
 
-/* Logo click scale effect */
 .logo-container:active {
     transform: scale(1.1);
 }
@@ -101,13 +105,12 @@ body {
 }
 
 /* ================= EASTER EGG ================= */
-/* Bio Popup Glassmorphic + Typing Animation */
 #bio-popup {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(28, 31, 42, 0.85); /* matches hero box */
+  background: rgba(28, 31, 42, 0.85);
   backdrop-filter: blur(18px);
   color: var(--accent);
   padding: 2rem;
@@ -119,7 +122,7 @@ body {
   max-width: 400px;
   font-family: 'Courier New', monospace;
   font-size: 1.1rem;
-  border: 1px solid rgba(139,213,163,0.2);
+  border: 1px solid rgba(165,124,90,0.2);
 }
 
 #bio-popup.show {
@@ -156,7 +159,7 @@ body {
 /* ================= HERO ================= */
 .hero {
     height: 100vh;
-    background: url("assets/logo/hero_image.png") center/cover no-repeat;
+    background: url("assets/logo/bannersketch.png") center/cover no-repeat;
     position: relative;
 }
 
@@ -175,10 +178,10 @@ body {
     max-width: 650px;
     padding: 45px;
     text-align: center;
-    background: rgba(28,31,42,0.35);
+    background: var(--card);
     backdrop-filter: blur(18px);
     border-radius: 20px;
-    border: 1px solid rgba(139,213,163,0.1);
+    border: 1px solid rgba(165,124,90,0.1);
     box-shadow: 0 10px 40px rgba(0,0,0,0.6);
 }
 
@@ -192,19 +195,18 @@ body {
     margin-bottom: 20px;
 }
 
-/* Button */
 .hero-box button {
     padding: 12px 28px;
     border-radius: 30px;
-    background: rgba(139,213,163,0.15);
-    border: 1px solid rgba(139,213,163,0.4);
+    background: rgba(165,124,90,0.15);
+    border: 1px solid rgba(165,124,90,0.4);
     color: var(--accent);
     cursor: pointer;
     transition: 0.3s;
 }
 
 .hero-box button:hover {
-    background: rgba(139,213,163,0.3);
+    background: rgba(165,124,90,0.3);
 }
 
 /* ================= SECTION ================= */
@@ -215,7 +217,7 @@ section {
 h3 {
     text-align: center;
     margin-bottom: 50px;
-    text-shadow: 0 0 10px rgba(139,213,163,0.3);
+    text-shadow: 0 0 10px rgba(165,124,90,0.3);
     color: var(--accent);
     font-size: 22px;
     font-weight: 600;
@@ -244,17 +246,18 @@ h3 {
     transform: translateY(-10px) scale(1.02);
 }
 
-/* Overlay */
+/* Dark brown overlay for visibility */
 .project-card::before {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(
         to top,
-        rgba(0,0,0,0.85),
-        rgba(0,0,0,0.2)
+        rgba(18,16,13,0.85), /* deep background */
+        rgba(18,16,13,0.2)   /* fade */
     );
     z-index: 1;
+    border-radius: 18px;
 }
 
 .project-overlay {
@@ -262,11 +265,14 @@ h3 {
     bottom: 0;
     z-index: 2;
     padding: 20px;
+    background: rgba(45,38,30,0.6); /* semi-glass brown panel for text */
+    border-radius: 12px 12px 0 0;
 }
 
 .project-overlay h4 {
     font-size: 20px;
     margin-bottom: 8px;
+    color: var(--text);
 }
 
 .project-overlay p {
@@ -278,22 +284,22 @@ h3 {
 .project-overlay button {
     padding: 8px 16px;
     border-radius: 20px;
-    background: rgba(139,213,163,0.2);
-    border: 1px solid rgba(139,213,163,0.4);
+    background: rgba(165,124,90,0.3);
+    border: 1px solid rgba(165,124,90,0.4);
     color: var(--accent);
     cursor: pointer;
     transition: 0.3s;
 }
 
 .project-overlay button:hover {
-    background: rgba(139,213,163,0.35);
+    background: rgba(165,124,90,0.45);
+    box-shadow: 0 0 12px var(--accent-strong);
 }
 
 /* Background images */
 .project-card.cave { background-image: url("assets/projects/cave.jpg"); }
 .project-card.haunted { background-image: url("assets/projects/haunted.jpg"); }
 .project-card.godot-demo { background-image: url("assets/projects/godot.jpg"); }
-
 /* ================= SKILL CARDS ================= */
 .skills-grid {
     display: grid;
@@ -303,11 +309,7 @@ h3 {
 
 .skill-card {
     position: relative;
-    background: linear-gradient(
-        180deg,
-        rgba(28,31,42,0.95),
-        rgba(20,22,30,0.95)
-    );
+    background: linear-gradient(180deg, rgba(45,38,30,0.95), rgba(36,31,25,0.95));
     border-radius: 16px;
     padding: 20px;
     border: 1px solid var(--border);
@@ -318,7 +320,6 @@ h3 {
     transform: translateY(-12px) scale(1.02);
 }
 
-/* Header */
 .card-header {
     display: flex;
     justify-content: space-between;
@@ -326,16 +327,14 @@ h3 {
     color: var(--muted);
 }
 
-/* Level */
 .level {
-    background: rgba(139,213,163,0.2);
-    border: 1px solid rgba(139,213,163,0.4);
+    background: rgba(165,124,90,0.2);
+    border: 1px solid rgba(165,124,90,0.4);
     padding: 5px 10px;
     border-radius: 6px;
     color: var(--accent);
 }
 
-/* Image */
 .card-image {
     height: 180px;
     border-radius: 10px;
@@ -356,7 +355,6 @@ h3 {
 .card-image.blender { background-image: url("assets/cards/blender.jpg"); }
 .card-image.godot { background-image: url("assets/cards/godot.jpg"); }
 
-/* Description */
 .card-desc {
     background: rgba(255,255,255,0.03);
     padding: 15px;
@@ -380,10 +378,10 @@ h3 {
 
 .contact-box {
     text-align: center;
-    background: rgba(28,31,42,0.4);
+    background: var(--card);
     backdrop-filter: blur(18px);
     border-radius: 18px;
-    border: 1px solid rgba(139,213,163,0.12);
+    border: 1px solid rgba(165,124,90,0.12);
     box-shadow: 0 10px 40px rgba(0,0,0,0.5);
     transition: 0.3s;
 }
@@ -397,16 +395,16 @@ h3 {
     display: inline-block;
     padding: 12px 28px;
     border-radius: 30px;
-    background: rgba(139,213,163,0.1);
-    border: 1px solid rgba(139,213,163,0.3);
+    background: rgba(165,124,90,0.1);
+    border: 1px solid rgba(165,124,90,0.3);
     color: var(--accent);
     text-decoration: none;
     transition: 0.3s;
 }
 
 .email-btn:hover {
-    background: rgba(139,213,163,0.25);
-    box-shadow: 0 0 20px rgba(139,213,163,0.2);
+    background: rgba(165,124,90,0.25);
+    box-shadow: 0 0 20px rgba(165,124,90,0.2);
 }
 
 .social-links {
@@ -427,7 +425,7 @@ h3 {
 }
 
 .social-links a:hover {
-    background: rgba(139,213,163,0.15);
+    background: rgba(165,124,90,0.15);
 }
 
 .contact-box p {
@@ -478,13 +476,13 @@ footer {
     background: linear-gradient(
         90deg,
         transparent,
-        rgba(139,213,163,0.9),
+        rgba(165,124,90,0.9),
         transparent
     );
     border-radius: 10px;
     box-shadow:
-        0 0 12px rgba(139,213,163,0.5),
-        0 0 25px rgba(139,213,163,0.2);
+        0 0 12px rgba(165,124,90,0.5),
+        0 0 25px rgba(165,124,90,0.2);
     animation: dividerPulse 3s ease-in-out infinite;
 }
 
@@ -500,7 +498,7 @@ footer {
     border-radius: 50%;
     box-shadow:
         0 0 10px var(--accent),
-        0 0 20px rgba(139,213,163,0.6);
+        0 0 20px rgba(165,124,90,0.6);
 }
 
 @keyframes dividerPulse {
