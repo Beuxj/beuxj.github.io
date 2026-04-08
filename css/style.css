@@ -421,7 +421,7 @@ body {
 
 /* ============ CONTACT — solo (index page) ============ */
 .contact-section { background: var(--bg2); border-top: 1px solid var(--border); }
-.contact-solo { max-width: 560px; }
+.contact-solo { max-width: 1800px; margin: 0 ; text-align: center;}
 .contact-card { background: var(--surface); border: 1px solid var(--border); padding: 30px; margin-bottom: 16px; transition: border-color 0.3s; }
 .contact-card:hover { border-color: var(--border2); }
 .contact-desc { font-family: var(--font-mono); font-size: 13px; color: var(--text-dim); line-height: 1.9; margin-bottom: 22px; }

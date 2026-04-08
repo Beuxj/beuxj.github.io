@@ -8,28 +8,32 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/recents.css" />
 </head>
 <body>
 
   <header class="topnav">
-    <!-- LOGO + BRAND -->
     <div class="nav-logo">
-      <img src="assets/logo/BEUXJ.png" alt="BEUXJ Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <img src="assets/logo.png" alt="BEUXJ Logo"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
       <span class="nav-logo-fallback" style="display:none">BX</span>
     </div>
     <div class="nav-brand">BEUXJ<span class="nav-brand-ext">.DEV</span></div>
     <nav class="nav-links">
-      <a href="index.html" class="nav-link active">Home</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#arsenal" class="nav-link">Arsenal</a>
-      <a href="#contact" class="nav-link">Contact</a>
+      <a href="index.html"  class="nav-link active">Home</a>
+      <a href="#recents"    class="nav-link">Recents</a>
+      <a href="#projects"   class="nav-link">Projects</a>
+      <a href="#arsenal"    class="nav-link">Arsenal</a>
+      <a href="#contact"    class="nav-link">Contact</a>
     </nav>
     <div class="nav-tag"><span class="blink-dot"></span> SIGNAL SYNC / ESTABLISHED</div>
   </header>
 
   <main class="content">
 
-    <!-- HERO -->
+    <!-- ═══════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════ -->
     <section class="hero" id="home">
       <div class="hero-bg">
         <div class="hero-scan-lines"></div>
@@ -50,19 +54,54 @@
           <a href="#projects" class="btn-ghost">ENTER THE ARCHIVE</a>
         </div>
       </div>
+
       <div class="hero-corner-tag">BEUXJ // v2026</div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- ═══════════════════════════════════════
+          added RECENTS secion and removed pipeline section
+    ═══════════════════════════════════════ -->
+    <section class="recents-section" id="recents">
+      <div class="recents-header reveal">
+        <div class="recents-header-left">
+          <div class="recents-live-tag">
+            <span class="recents-live-dot"></span>
+            LATEST UPLOAD
+          </div>
+          <div class="section-label" style="margin-bottom:6px">JUST DROPPED</div>
+          <h2 class="section-title">What's New</h2>
+        </div>
+        <a href="#projects" class="recents-view-all">VIEW ALL PROJECTS →</a>
+      </div>
+
+      <!-- Featured card injected by script.js from data.js[0] -->
+      <div id="featuredCard">
+        <div class="fc-empty">LOADING...</div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         PROJECTS
+    ═══════════════════════════════════════ -->
     <section class="section projects-section" id="projects">
       <div class="section-header reveal">
         <div class="section-label">DISCOVERY LOG</div>
         <h2 class="section-title">Projects</h2>
-        <div class="section-meta"><span>RECOVERED ARTIFACTS // SYSTEM VERSION 4.0.3</span><span class="meta-right">3 ITEMS LISTED</span></div>
+        <div class="section-meta">
+          <span>RECOVERED ARTIFACTS // SYSTEM VERSION 4.0.3</span>
+          <span class="meta-right">3 ITEMS LISTED</span>
+        </div>
       </div>
       <div class="projects-grid">
+
         <div class="project-card reveal" data-index="01">
-          <div class="card-media"><div class="card-media-placeholder"><span class="media-tag">BLENDER RENDERS</span><div class="media-noise"></div></div><div class="card-overlay-tags"><span class="chip chip-green">ACTIVE</span></div></div>
+          <div class="card-media">
+            <div class="card-media-placeholder">
+              <span class="media-tag">BLENDER RENDERS</span>
+              <div class="media-noise"></div>
+            </div>
+            <div class="card-overlay-tags"><span class="chip chip-green">ACTIVE</span></div>
+          </div>
           <div class="card-body">
             <div class="card-meta-row"><span class="card-type">ENGINE</span><span class="card-val">BLENDER 4.x</span></div>
             <div class="card-meta-row"><span class="card-type">TYPE</span><span class="card-val">ENVIRONMENT / ASSET</span></div>
@@ -72,8 +111,15 @@
             <a href="html/blender.html" class="card-btn">VIEW RENDERS</a>
           </div>
         </div>
+
         <div class="project-card reveal" data-index="02">
-          <div class="card-media"><div class="card-media-placeholder"><span class="media-tag">GODOT DEMOS</span><div class="media-noise"></div></div><div class="card-overlay-tags"><span class="chip chip-orange">IN DEV</span></div></div>
+          <div class="card-media">
+            <div class="card-media-placeholder">
+              <span class="media-tag">GODOT DEMOS</span>
+              <div class="media-noise"></div>
+            </div>
+            <div class="card-overlay-tags"><span class="chip chip-orange">IN DEV</span></div>
+          </div>
           <div class="card-body">
             <div class="card-meta-row"><span class="card-type">ENGINE</span><span class="card-val">GODOT 4.x</span></div>
             <div class="card-meta-row"><span class="card-type">TYPE</span><span class="card-val">PROTOTYPE / DEMO</span></div>
@@ -83,8 +129,15 @@
             <a href="html/godot.html" class="card-btn">VIEW DEMOS</a>
           </div>
         </div>
+
         <div class="project-card reveal" data-index="03">
-          <div class="card-media"><div class="card-media-placeholder"><span class="media-tag">GAMES</span><div class="media-noise"></div></div><div class="card-overlay-tags"><span class="chip chip-blue">PLAYABLE</span></div></div>
+          <div class="card-media">
+            <div class="card-media-placeholder">
+              <span class="media-tag">GAMES</span>
+              <div class="media-noise"></div>
+            </div>
+            <div class="card-overlay-tags"><span class="chip chip-blue">PLAYABLE</span></div>
+          </div>
           <div class="card-body">
             <div class="card-meta-row"><span class="card-type">ENGINE</span><span class="card-val">GODOT / UE5</span></div>
             <div class="card-meta-row"><span class="card-type">TYPE</span><span class="card-val">GAMES / WORLDS</span></div>
@@ -94,11 +147,14 @@
             <a href="html/games.html" class="card-btn">VIEW GAMES</a>
           </div>
         </div>
+
       </div>
       <div class="section-divider"></div>
     </section>
 
-    <!-- TECHNICAL ARSENAL -->
+    <!-- ═══════════════════════════════════════
+         TECHNICAL ARSENAL
+    ═══════════════════════════════════════ -->
     <section class="section diagnostic-section" id="arsenal">
       <div class="diag-layout">
         <div class="diag-left reveal">
@@ -116,43 +172,46 @@
         <div class="diag-right reveal">
           <div class="diag-card">
             <div class="diag-card-tag">ENVIRONMENT DESIGNER</div>
-            <div class="diag-card-center"><div class="diag-card-sub">TECHNICAL AREA</div><div class="diag-big-text">RTX<span class="diag-dot">.</span>ON</div></div>
-            <div class="diag-card-footer"><span class="chip chip-outline">SCHOOL ARTIST</span><span class="chip chip-outline">INDIE BUILDER</span></div>
+            <div class="diag-card-center">
+              <div class="diag-card-sub">TECHNICAL AREA</div>
+              <div class="diag-big-text">RTX<span class="diag-dot">.</span>ON</div>
+            </div>
+            <div class="diag-card-footer">
+              <span class="chip chip-outline">SCHOOL ARTIST</span>
+              <span class="chip chip-outline">INDIE BUILDER</span>
+            </div>
           </div>
         </div>
       </div>
       <div class="skill-cards-grid">
-        <div class="skill-card reveal"><div class="skill-card-header"><span class="skill-card-label">SKILL CARD / TYPE 01</span><span class="skill-card-num">5</span></div><div class="skill-card-name">UNREAL ENGINE 5</div><div class="skill-card-media"><div class="skill-media-placeholder"><span>UE5</span></div></div><div class="skill-card-body"><div class="skill-card-role">PRIMARY SYSTEM</div><p>Real-time environment creation using Lumen, Nanite, and cinematic lighting workflows.</p></div></div>
-        <div class="skill-card reveal"><div class="skill-card-header"><span class="skill-card-label">SKILL CARD / TYPE 02</span><span class="skill-card-num">4</span></div><div class="skill-card-name">BLENDER</div><div class="skill-card-media"><div class="skill-media-placeholder"><span>BLD</span></div></div><div class="skill-card-body"><div class="skill-card-role">ASSET CREATION</div><p>High-quality 3D assets with optimized topology and environment-ready modeling workflows.</p></div></div>
-        <div class="skill-card reveal"><div class="skill-card-header"><span class="skill-card-label">SKILL CARD / TYPE 03</span><span class="skill-card-num">6</span></div><div class="skill-card-name">GODOT</div><div class="skill-card-media"><div class="skill-media-placeholder"><span>GDT</span></div></div><div class="skill-card-body"><div class="skill-card-role">GAME SYSTEMS</div><p>Scene architecture, scripting, and immersive gameplay mechanics with a focus on atmosphere.</p></div></div>
-      </div>
-      <div class="section-divider"></div>
-    </section>
-
-    <!-- PIPELINE -->
-    <section class="section pipeline-section">
-      <div class="section-header reveal"><h2 class="section-title">The Pipeline Artifacts</h2></div>
-      <div class="pipeline-steps">
-        <div class="pipeline-step reveal">
-          <div class="pipeline-text"><div class="pipeline-num">01_Concept</div><p>Defining the atmospheric mood and architectural silhouette. Using low-poly massing and value studies to lock in the player pathing.</p><div class="pipeline-icon">◈</div></div>
-          <div class="pipeline-media"><div class="pipeline-placeholder"><div class="pp-noise"></div><span>CONCEPT</span></div></div>
+        <div class="skill-card reveal">
+          <div class="skill-card-header"><span class="skill-card-label">SKILL CARD / TYPE 01</span><span class="skill-card-num">5</span></div>
+          <div class="skill-card-name">UNREAL ENGINE 5</div>
+          <div class="skill-card-media"><div class="skill-media-placeholder"><span>UE5</span></div></div>
+          <div class="skill-card-body"><div class="skill-card-role">PRIMARY SYSTEM</div><p>Real-time environment creation using Lumen, Nanite, and cinematic lighting workflows.</p></div>
         </div>
-        <div class="pipeline-step pipeline-step-reverse reveal">
-          <div class="pipeline-media"><div class="pipeline-placeholder"><div class="pp-noise"></div><span>BLOCKOUT</span></div></div>
-          <div class="pipeline-text"><div class="pipeline-num">02_Blockout</div><p>Establishing scale and collision. Testing sightlines and lighting bounce in-engine to ensure performance targets are met early.</p><div class="pipeline-icon">◫</div></div>
+        <div class="skill-card reveal">
+          <div class="skill-card-header"><span class="skill-card-label">SKILL CARD / TYPE 02</span><span class="skill-card-num">4</span></div>
+          <div class="skill-card-name">BLENDER</div>
+          <div class="skill-card-media"><div class="skill-media-placeholder"><span>BLD</span></div></div>
+          <div class="skill-card-body"><div class="skill-card-role">ASSET CREATION</div><p>High-quality 3D assets with optimized topology and environment-ready modeling workflows.</p></div>
         </div>
-        <div class="pipeline-step reveal">
-          <div class="pipeline-text"><div class="pipeline-num">03_Final World</div><p>Integration of high-fidelity assets, volumetric fog, and particle systems. Final color-grading and lighting optimization for AAA standards.</p><div class="pipeline-icon">◧</div></div>
-          <div class="pipeline-media"><div class="pipeline-placeholder"><div class="pp-noise"></div><span>FINAL</span></div></div>
+        <div class="skill-card reveal">
+          <div class="skill-card-header"><span class="skill-card-label">SKILL CARD / TYPE 03</span><span class="skill-card-num">6</span></div>
+          <div class="skill-card-name">GODOT</div>
+          <div class="skill-card-media"><div class="skill-media-placeholder"><span>GDT</span></div></div>
+          <div class="skill-card-body"><div class="skill-card-role">GAME SYSTEMS</div><p>Scene architecture, scripting, and immersive gameplay mechanics with a focus on atmosphere.</p></div>
         </div>
       </div>
       <div class="section-divider"></div>
     </section>
 
-    <!-- CONTACT — email + socials only -->
+    <!-- ═══════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════ -->
     <section class="section contact-section" id="contact">
       <div class="section-header reveal">
-        <div class="section-label">MISSION HISTORY</div>
+        <div class="section-label">TRANSMISSION</div>
         <h2 class="section-title">Contact</h2>
       </div>
       <div class="contact-solo reveal">
@@ -177,9 +236,15 @@
 
   <footer class="footer">
     <div class="footer-left">© 2026 BEUXJ // ALL RIGHTS RESERVED</div>
-    <div class="footer-right"><span>BX_ARTIST_ID: 0049</span><span>ENV_DESIGN_BUILD: 2026.03</span><span>SYS: OPERATIONAL</span></div>
+    <div class="footer-right">
+      <span>BX_ARTIST_ID: 0049</span>
+      <span>ENV_DESIGN_BUILD: 2026.03</span>
+      <span>SYS: OPERATIONAL</span>
+    </div>
   </footer>
 
+  <!-- data.js MUST come before script.js -->
+  <script src="js/data.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
