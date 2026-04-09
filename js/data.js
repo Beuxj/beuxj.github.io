@@ -20,18 +20,17 @@ const BEUXJ_RECENTS = [
 
 //- this is the example data .. need to change when i upload a file ^^^^
   {
-    title:  "Cave Escape",
-    type:   "GAME",
-    status: "IN DEV",
+    title:  "Knight Metroidvania Demo",
+    type:   "DEMO",
+    status: "PUBLISHED",
     date:   "08 Apr 2026",
-    image:  "assets/gm-featured.jpg",
-    link:   "html/games.html",
-    desc:   "A realistic first-person survival game set deep underground. Trapped, no memory, limited light — navigate, solve, escape.",
+    image:  "assets/thumbnails/Screenshot 2026-04-09 093857.png",
+    link:   "html/godot.html",
+    desc:   "A demo for a metroidvania style game with a knight protagonist. Features a small level with platforming elements.",
     specs: [
-      { key: "ENGINE",   val: "Unreal Engine 5.4" },
-      { key: "LIGHTING", val: "Lumen RT / SSG" },
-      { key: "GEOMETRY", val: "Nanite Virtualized" },
-      { key: "WORKFLOW", val: "Procedural PCG" }
+      { key: "ENGINE",   val: "Godot Engine 4.4" },
+      { key: "LANGUAGE", val: "GDScript" },
+      { key: "RENDERER", val: "Forward+" },
     ]
   },
 
