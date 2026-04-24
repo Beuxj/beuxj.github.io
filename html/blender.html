@@ -6,29 +6,35 @@
   <title>BEUXJ — Blender Renders</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swapfamily=Inconsolata:wght@300;400;500;600https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swapfamily=Exo+2:wght@400;500;600;700https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swapdisplay=swap" rel="stylesheet">family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swapfamily=Inconsolata:wght@300;400;500;600https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swapfamily=Exo+2:wght@400;500;600;700https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swapdisplay=swap" rel="stylesheet">family=Exo+2:wght@400;500;600;700<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swapfamily=Inconsolata:wght@300;400;500;600https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swapfamily=Exo+2:wght@400;500;600;700https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swapdisplay=swap" rel="stylesheet">family=Inconsolata:wght@400;500<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swapfamily=Inconsolata:wght@300;400;500;600https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swapfamily=Exo+2:wght@400;500;600;700https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;500;600;700&display=swapdisplay=swap" rel="stylesheet">display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="stylesheet" href="../css/blender.css"/>
+  <link rel="stylesheet" href="../css/modal.css"/>
 </head>
 <body class="page-blender">
 
   <header class="topnav">
     <div class="nav-logo">
-      <img src="../assets/logo/BEUXJ.png" alt="BEUXJ Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+      <img src="../assets/logo.png" alt="BEUXJ"
+           onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
       <span class="nav-logo-fallback" style="display:none">BX</span>
     </div>
     <div class="nav-brand">BEUXJ<span class="nav-brand-ext">.DEV</span></div>
     <nav class="nav-links">
       <a href="../index.html" class="nav-link">Home</a>
       <a href="../index.html#projects" class="nav-link active">Projects</a>
-      <a href="../index.html#arsenal" class="nav-link">Arsenal</a>
-      <a href="../index.html#contact" class="nav-link">Contact</a>
+      <a href="../index.html#arsenal"  class="nav-link">Arsenal</a>
+      <a href="../index.html#contact"  class="nav-link">Contact</a>
     </nav>
-    <div class="nav-tag"><span class="blink-dot" style="background:var(--bl-accent);box-shadow:0 0 6px var(--bl-accent)"></span> RENDER PIPELINE / ACTIVE</div>
+    <div class="nav-tag">
+      <span class="blink-dot" style="background:var(--bl-accent);box-shadow:0 0 6px var(--bl-accent)"></span>
+      RENDER PIPELINE / ACTIVE
+    </div>
   </header>
 
   <main class="content">
 
+    <!-- HERO -->
     <section class="sub-hero bl-hero">
       <div class="sub-hero-bg">
         <div class="bl-particles" id="blParticles"></div>
@@ -37,22 +43,15 @@
       </div>
       <div class="sub-hero-inner">
         <div class="sub-breadcrumb">
-          <a href="../index.html">HOME</a>
-          <span class="bc-sep">›</span>
-          <a href="../index.html#projects">PROJECTS</a>
-          <span class="bc-sep">›</span>
+          <a href="../index.html">HOME</a><span class="bc-sep">›</span>
+          <a href="../index.html#projects">PROJECTS</a><span class="bc-sep">›</span>
           <span class="bc-cur">BLENDER RENDERS</span>
         </div>
-        <div class="sub-page-tag">
-          <span class="sp-tag-dot bl-dot"></span>
-          RENDER PIPELINE // BLENDER 4.x
-        </div>
-        <h1 class="sub-title bl-title">
-          Blender<br/><span class="bl-accent-text">Renders</span>
-        </h1>
-        <p class="sub-desc">High-quality 3D assets and environment renders born from light, shadow, and topology. Every mesh sculpted with intention — every render lit for atmosphere.</p>
+        <div class="sub-page-tag"><span class="sp-tag-dot bl-dot"></span>RENDER PIPELINE // BLENDER 4.x</div>
+        <h1 class="sub-title">Blender<br/><span class="bl-accent-text">Renders</span></h1>
+        <p class="sub-desc">High-quality 3D assets and environment renders. Click any card to open full details, preview the work, and download files.</p>
         <div class="sub-stats">
-          <div class="stat-item"><div class="stat-val bl-val">5.x</div><div class="stat-label">VERSION</div></div>
+          <div class="stat-item"><div class="stat-val bl-val">4.x</div><div class="stat-label">VERSION</div></div>
           <div class="stat-item"><div class="stat-val bl-val">Cycles</div><div class="stat-label">RENDERER</div></div>
           <div class="stat-item"><div class="stat-val bl-val">HDRI</div><div class="stat-label">LIGHTING</div></div>
           <div class="stat-item"><div class="stat-val bl-val">PBR</div><div class="stat-label">MATERIALS</div></div>
@@ -61,62 +60,27 @@
       <div class="sub-corner-tag">RENDER_ARCHIVE // 2026</div>
     </section>
 
+    <!-- FILTER BAR -->
     <div class="filter-bar bl-filter-bar">
       <div class="filter-label">FILTER BY:</div>
       <button class="filter-btn active" data-filter="all">ALL</button>
-      <button class="filter-btn" data-filter="environment">ENVIRONMENT</button>
+      <button class="filter-btn" data-filter="render">ENVIRONMENT</button>
       <button class="filter-btn" data-filter="asset">ASSET</button>
-      <button class="filter-btn" data-filter="character">CHARACTER</button>
-      <div class="filter-count" id="filterCount">0 RENDERS</div>
+      <div class="filter-count" id="filterCount">— RENDERS</div>
     </div>
 
+    <!-- RENDER GRID — auto-built from data.js -->
     <section class="gallery-section">
-      <div class="render-grid" id="renderGrid">
-        <div class="render-card reveal" data-cat="environment">
-          <div class="render-thumb">
-            <img src="../assets/bl-01.jpg" alt="Cave Interior"/>
-            <div class="render-overlay"><div class="render-overlay-content"><div class="ro-tag">ENVIRONMENT</div><div class="ro-title">Cave Interior</div><div class="ro-meta">Cycles · 4096px · HDRI</div></div></div>
-          </div>
-          <div class="render-info"><div class="ri-left"><div class="ri-title">Cave Interior</div><div class="ri-sub">Volumetric fog + procedural rock shader</div></div><div class="ri-tag bl-chip">ENV</div></div>
-        </div>
-        <div class="render-card reveal" data-cat="asset">
-          <div class="render-thumb">
-            <img src="../assets/bl-02.jpg" alt="Rock Formation"/>
-            <div class="render-overlay"><div class="render-overlay-content"><div class="ro-tag">ASSET</div><div class="ro-title">Rock Formation</div><div class="ro-meta">Cycles · 2048px · Studio</div></div></div>
-          </div>
-          <div class="render-info"><div class="ri-left"><div class="ri-title">Rock Formation</div><div class="ri-sub">Sculpted high-poly, baked to game-res</div></div><div class="ri-tag bl-chip">ASSET</div></div>
-        </div>
-        <div class="render-card reveal" data-cat="environment">
-          <div class="render-thumb">
-            <img src="../assets/bl-03.jpg" alt="Underground Passage"/>
-            <div class="render-overlay"><div class="render-overlay-content"><div class="ro-tag">ENVIRONMENT</div><div class="ro-title">Underground Passage</div><div class="ro-meta">Cycles · 4096px · Point Lights</div></div></div>
-          </div>
-          <div class="render-info"><div class="ri-left"><div class="ri-title">Underground Passage</div><div class="ri-sub">Atmospheric mood study for cave game</div></div><div class="ri-tag bl-chip">ENV</div></div>
-        </div>
-        <div class="render-card reveal" data-cat="asset">
-          <div class="render-thumb">
-            <img src="../assets/bl-04.jpg" alt="Torch Prop"/>
-            <div class="render-overlay"><div class="render-overlay-content"><div class="ro-tag">ASSET</div><div class="ro-title">Torch Prop</div><div class="ro-meta">EEVEE · 2048px · Emission</div></div></div>
-          </div>
-          <div class="render-info"><div class="ri-left"><div class="ri-title">Torch Prop</div><div class="ri-sub">Game-ready, 512 tris, emission baked</div></div><div class="ri-tag bl-chip">ASSET</div></div>
-        </div>
-        <div class="render-card reveal" data-cat="character">
-          <div class="render-thumb">
-            <img src="../assets/bl-05.jpg" alt="Character Bust"/>
-            <div class="render-overlay"><div class="render-overlay-content"><div class="ro-tag">CHARACTER</div><div class="ro-title">Character Bust</div><div class="ro-meta">Cycles · 4096px · 3-Point</div></div></div>
-          </div>
-          <div class="render-info"><div class="ri-left"><div class="ri-title">Character Bust</div><div class="ri-sub">Sculpted in Blender, PBR skin shader</div></div><div class="ri-tag bl-chip">CHAR</div></div>
-        </div>
-        <div class="render-card reveal" data-cat="environment">
-          <div class="render-thumb">
-            <img src="../assets/bl-06.jpg" alt="Crystal Chamber"/>
-            <div class="render-overlay"><div class="render-overlay-content"><div class="ro-tag">ENVIRONMENT</div><div class="ro-title">Crystal Chamber</div><div class="ro-meta">Cycles · 4096px · Caustics</div></div></div>
-          </div>
-          <div class="render-info"><div class="ri-left"><div class="ri-title">Crystal Chamber</div><div class="ri-sub">Procedural crystal shader + light caustics</div></div><div class="ri-tag bl-chip">ENV</div></div>
+      <div class="render-grid" id="projectGrid"
+           data-category="RENDER,ASSET"
+           data-template="render">
+        <div class="pg-empty" style="grid-column:1/-1;text-align:center;padding:48px;font-family:var(--font-mono);font-size:11px;color:var(--text-xdim);letter-spacing:2px">
+          LOADING RENDERS...
         </div>
       </div>
     </section>
 
+    <!-- TOOLS SECTION (static) -->
     <section class="section tools-section">
       <div class="section-header reveal">
         <div class="section-label" style="color:var(--bl-accent)">— WORKFLOW</div>
@@ -125,7 +89,7 @@
       <div class="tools-grid reveal">
         <div class="tool-card bl-tool-card"><div class="tool-icon">◈</div><div class="tool-name">SCULPTING</div><p>Dynamic topology sculpting for organic rock and character forms. Multi-res workflow for high-poly detail baking.</p></div>
         <div class="tool-card bl-tool-card"><div class="tool-icon">◫</div><div class="tool-name">SHADING</div><p>Fully procedural PBR material stacks. Noise-driven displacement and layered SSS for organic surfaces.</p></div>
-        <div class="tool-card bl-tool-card"><div class="tool-icon">◧</div><div class="tool-name">LIGHTING</div><p>HDRI + practical light combos. Volumetric atmosphere passes with Cycles path-tracing for photorealistic output.</p></div>
+        <div class="tool-card bl-tool-card"><div class="tool-icon">◧</div><div class="tool-name">LIGHTING</div><p>HDRI + practical light combos. Volumetric atmosphere with Cycles path-tracing for photorealistic output.</p></div>
         <div class="tool-card bl-tool-card"><div class="tool-icon">◩</div><div class="tool-name">COMPOSITING</div><p>In-engine compositor with glare, chromatic aberration, and color-grade passes to match cinematic references.</p></div>
       </div>
     </section>
@@ -133,10 +97,16 @@
   </main>
 
   <footer class="footer">
-    <div class="footer-left">← <a href="../index.html" style="color:var(--bl-accent);text-decoration:none;">BACK TO HOME</a></div>
-    <div class="footer-right"><span>BLENDER RENDERS // ARCHIVE</span><span>© 2026 BEUXJ</span></div>
+    <div class="footer-left">
+      ← <a href="../index.html" style="color:var(--bl-accent);text-decoration:none;">BACK TO HOME</a>
+    </div>
+    <div class="footer-right">
+      <span>BLENDER RENDERS // ARCHIVE</span>
+      <span>© 2026 BEUXJ</span>
+    </div>
   </footer>
 
+  <script src="../js/data.js"></script>
   <script src="../js/script.js"></script>
   <script src="../js/blender.js"></script>
 </body>
